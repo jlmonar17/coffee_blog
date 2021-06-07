@@ -5,6 +5,7 @@
     --primary: #784d3c;
     --white: #ffffff;
     --black: #000000;
+    --ligthGray: #e1e1e1;
 }
 
 html {
@@ -40,6 +41,7 @@ h2,
 h3,
 h4 {
     font-family: var(--headingFont);
+    line-height: 1.2;
 }
 
 h1 {
@@ -56,6 +58,10 @@ h3 {
 
 h4 {
     font-size: 2.8rem;
+}
+
+img {
+    width: 100%;
 }
 
 /* Utilities */
@@ -88,6 +94,7 @@ h4 {
 
 .bar {
     display: block;
+    padding-top: 3rem;
 }
 
 @media (min-width: 768px) {
@@ -122,4 +129,84 @@ h4 {
         display: flex;
         gap: 2rem;
     }
+}
+
+/* Blog */
+@media (min-width: 768px) {
+    .principal-container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 4rem;
+    }
+}
+
+.entry {
+    border-bottom: 1px solid var(--ligthGray);
+    margin-bottom: 2rem;
+}
+
+.entry:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.entry__image {
+    max-width: 100%;
+}
+
+.button {
+    display: block;
+    color: var(--white);
+    padding: 1rem 3rem;
+    font-family: var(--headingFont);
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    .button {
+        display: inline-block;
+    }
+}
+
+.button--primary {
+    background-color: var(--black);
+}
+
+/* Sidebar */
+.courses {
+    list-style: none;
+}
+
+.widget-course {
+    border-bottom: 1px solid var(--ligthGray);
+    margin-bottom: 2rem;
+}
+
+.widget-course:last-of-type {
+    border-bottom: none;
+    margin-bottom: 2rem;
+}
+
+.widget-course--label {
+    font-weight: bold;
+    font-family: var(--headingFont);
+    font-size: 2rem;
+}
+
+.widget-course--info {
+    font-weight: normal;
+}
+
+.button--secondary {
+    background-color: var(--primary);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--black);
+    padding-bottom: 3rem;
 }
