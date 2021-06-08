@@ -210,3 +210,17 @@ img {
     background-color: var(--black);
     padding-bottom: 3rem;
 }
+
+/* About Us */
+
+@media (min-width: 768px) {
+    .about {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .about__text,
+    .about__image {
+        flex-basis: calc(50% - 1rem);
+    }
+}
