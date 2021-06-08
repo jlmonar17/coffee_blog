@@ -4,12 +4,27 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
         <title>Coffe Blog</title>
+        <meta name="description" content="Web Page about a Coffee Blog" />
+
+        <!-- Prefetch -->
+        <link rel="prefetch" href="about.html" as="document" />
+
+        <!-- Preload -->
+        <link rel="preload" href="css/normalize.css" as="style" />
         <link rel="stylesheet" href="css/normalize.css" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
+
+        <link
+            rel="preload"
+            href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap"
+            crossorigin="crossorigin"
+            as="font"
+        />
         <link
             href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap"
             rel="stylesheet"
         />
+
+        <link rel="preload" href="css/style.css" as="style" />
         <link rel="stylesheet" href="css/style.css" />
     </head>
     <body>
@@ -38,11 +53,22 @@
 
         <div class="container principal-container">
             <main class="blog">
-                <h3 class="no-margin">Our Blog</h3>
+                <h3>Our Blog</h3>
 
                 <div class="entry">
                     <div class="entry__image">
-                        <img src="img/blog1.jpg" alt="article image" />
+                        <picture>
+                            <source
+                                loading="lazy"
+                                srcset="img/blog1.webp"
+                                type="image/webp"
+                            />
+                            <img
+                                loading="lazy"
+                                src="img/blog1.jpg"
+                                alt="article image"
+                            />
+                        </picture>
                     </div>
 
                     <div class="entry__content">
@@ -62,7 +88,18 @@
 
                 <div class="entry">
                     <div class="entry__image">
-                        <img src="img/blog2.jpg" alt="article image" />
+                        <picture>
+                            <source
+                                loading="lazy"
+                                srcset="img/blog2.webp"
+                                type="image/webp"
+                            />
+                            <img
+                                loading="lazy"
+                                src="img/blog2.jpg"
+                                alt="article image"
+                            />
+                        </picture>
                     </div>
 
                     <div class="entry__content">
@@ -82,7 +119,18 @@
 
                 <div class="entry">
                     <div class="entry__image">
-                        <img src="img/blog3.jpg" alt="article image" />
+                        <picture>
+                            <source
+                                loading="lazy"
+                                srcset="img/blog3.webp"
+                                type="image/webp"
+                            />
+                            <img
+                                loading="lazy"
+                                src="img/blog3.jpg"
+                                alt="article image"
+                            />
+                        </picture>
                     </div>
 
                     <div class="entry__content">
@@ -102,7 +150,7 @@
             </main>
 
             <aside class="sidebar">
-                <h3 class="no-margin">Our Courses and Workshops</h3>
+                <h3>Our Courses and Workshops</h3>
 
                 <ul class="no-padding courses">
                     <li class="widget-course">
@@ -158,4 +206,6 @@
             </div>
         </footer>
     </body>
+
+    <script src="js/modernizr.js"></script>
 </html>
